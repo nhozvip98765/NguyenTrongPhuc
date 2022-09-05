@@ -1,0 +1,52 @@
+<div class="col-md-12">
+  <div class="">
+    <h3 class="text-center">Đăng ký thành viên</h3>
+    <form name="form" [formGroup]="RegisterForm" novalidate (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="fullname">Fullname</label>
+        <input type="text" class="form-control" name="fullname" formControlName="fullname" required minlength="3"
+          maxlength="20" />
+        <div *ngIf="RegisterForm.controls['fullname'].dirty && RegisterForm.hasError('required', 'fullname')"
+          class="alert alert-danger alert-dismissible fade show">
+          Fullname is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" name="username" formControlName="username" required minlength="3"
+          maxlength="20" />
+        <div *ngIf="RegisterForm.controls['username'].dirty && RegisterForm.hasError('required', 'username')"
+          class="alert alert-danger alert-dismissible fade show">
+          Username is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" name="email" formControlName="email" required email />
+        <div *ngIf="RegisterForm.controls['email'].dirty && RegisterForm.hasError('required', 'email')"
+          class="alert alert-danger alert-dismissible fade show">
+          Email is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="text" class="form-control" name="phone" formControlName="phone" required maxlength="11" />
+        <div *ngIf="RegisterForm.controls['phone'].dirty && RegisterForm.hasError('required', 'phone')"
+          class="alert alert-danger alert-dismissible fade show">
+          Phone is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" name="password" formControlName="password" required minlength="6" />
+        <div *ngIf="RegisterForm.controls['password'].dirty && RegisterForm.hasError('required', 'password')"
+          class="alert alert-danger alert-dismissible fade show">
+          Password is required
+        </div>
+      </div>
+      <div class="form-group">
+        <button type="submit" [disabled]="!RegisterForm.valid" class="btn btn-primary btn-block">Sign Up</button>
+      </div>
+    </form>
+  </div>
+</div>

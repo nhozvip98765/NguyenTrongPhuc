@@ -1,0 +1,158 @@
+<div id="client-app">
+    <header>
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">Vergency</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="admin/product">Sản phẩm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="admin/order">QL Đơn hàng</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline mt-2 mt-md-0">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                      
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="flex-shrink-0">
+        <div class="container">
+            <div class="mt-5 pt-3">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-center bg-dark text-white pt-3">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pd5">
+                        <div class="box-footer-colum">
+                            <h3 class="">Thông tin liên hệ:</h3>
+                            <ul class="footer-list-menu">
+                                <li class="footer-address">5/15 Tô Hiệu, Tân Thới Hòa, Tân Phú, Hồ Chí Minh (Giờ mở cửa
+                                    sáng: 08H30 -&gt; 11H30, Giờ nghĩ trưa: 11H30 -&gt; 13H30, Giờ mở cửa buổi chiều:
+                                    13H30 -&gt; 17H45) KH vui lòng đến đúng khung giờ mở cửa trên để mua hàng.</li>
+                                <li class="fooer-phone">
+                                    <label class="mr5">Phone: </label><span><a href=""> 037 335
+                                            7405.</a></span>
+                                </li>
+                                <li class="footer-email">
+                                    <label class="mr5">Email: </label><span>vergency.contact@gmail.com</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pd5">
+                        <div class="box-footer-colum">
+                            <h3 class="">Chính sách hỗ trợ:</h3>
+                            <ul class="footer-list-menu" style="list-style-type: none;">
+
+                                <li>
+                                    <a href="/search" title="Tìm kiếm">Tìm kiếm</a>
+                                </li>
+
+                                <li>
+                                    <a href="/pages/about-us" title="Giới thiệu">Giới thiệu</a>
+                                </li>
+
+                                <li>
+                                    <a href="/pages/chinh-sach-doi-tra" title="Chính sách đổi trả">Chính sách đổi
+                                        trả</a>
+                                </li>
+
+                                <li>
+                                    <a href="/pages/chinh-sach-bao-mat" title="Chính sách bảo mật">Chính sách bảo
+                                        mật</a>
+                                </li>
+
+                                <li>
+                                    <a href="/pages/dieu-khoan-dich-vu" title="Điều khoản dịch vụ">Điều khoản dịch
+                                        vụ</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pd5">
+                        <div class="box-footer-colum">
+                            <h3 class="">Thông tin liên kết:</h3>
+                            <div class="social">
+                                <ul class="footer-list-menu">
+                                    <li>Hãy kết nối với chúng tôi.</li>
+                                </ul>
+                                <ul class="list-unstyled clearfix">
+
+                                    <li class="facebook">
+                                        <a target="_blank" href="https://www.facebook.com/Vergency.vn"
+                                            class="fa fa-facebook"></a>
+                                    </li>
+
+
+
+
+                                    <li class="rss">
+                                        <a class="fa fa-instagram" target="_blank"
+                                            href="https://www.instagram.com/vergency.vn/"></a>
+                                    </li>
+
+
+                                </ul>
+
+                                <div class="dkbocongthuong">
+                                    <img src="//theme.hstatic.net/200000305259/1000869166/14/dkbocongthuong.png?v=32">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pd5">
+                        <div class="box-footer-colum">
+                            <h3 class="">Theo dõi Fanpage chúng tôi để cập nhật xu hướng thời trang hot nhất:</h3>
+                            <div class="fb-page" data-href="https://www.facebook.com/Vergency.vn"
+                                data-small-header="false" data-adapt-container-width="true" data-hide-cover="false"
+                                data-show-facepile="true">
+                                <div class="fb-xfbml-parse-ignore">
+                                    <blockquote cite="https://www.facebook.com/facebook"><a
+                                            href="https://www.facebook.com/facebook">Facebook</a></blockquote>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="pd5 text-center">
+                <div class="footer-copyright">
+
+                    <p>©Bản quyền thuộc về VERGENCY.</p>
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+</div>
+
+

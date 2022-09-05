@@ -1,0 +1,77 @@
+<div class="modal" id="myModal">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Giỏ hàng của tôi</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <table class="table table-bordered">
+                    <thead style="background-color: yellow;">
+                        <th>Name</th>
+                        <th>Image</th>
+                        <th>Description</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </thead>
+                    <tbody *ngFor="let item of order.carts">
+                        <td>{{item.name}}</td>
+                        <td><img class="img-fluid img-responsive rounded product-image" style="width: 100px ; height: 100px ;" src="{{item.image}}"></td>
+                        <td>{{item.description}}</td>
+                        <td>{{item.quantity}}</td>
+                        <td>{{item.price}}</td>
+                    </tbody>
+                </table>
+                <strong>Tổng Tiền</strong>
+                <input readonly type="text" [value]="order.totalAmount" class="form-control">
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button class="btn btn-lg btn-success mt-2" (click)="createOrder()">Thanh toán ngay</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<form class="form-inline mt-2 mt-md-0 text-center d-block ml-auto mr-auto">
+    <input class="form-control mr-sm-2" type="text" name="name" placeholder="Search Product By Name" [(ngModel)]="name"
+        (ngModelChange)="searchByName()" aria-label="Search">
+</form>
+<div class="container mt-5 mb-5">
+    <div class="d-flex justify-content-center row">
+        <div class="col-md-10" *ngFor="let i of products | paginate: {itemsPerPage: 4, currentPage: p}">
+            <div class="row p-2 my-2 bg-white border rounded">
+                <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image"
+                        src="{{i.image}}"></div>
+                <div class="col-md-6 mt-1">
+                    <h5>{{i.name}}</h5>
+                    <div class="mt-1 mb-1 spec-1"><span>100% cotton</span><span class="dot"></span><span>Light
+                            weight</span><span class="dot"></span><span>Best finish<br></span></div>
+                    <div class="mt-1 mb-1 spec-1"><span>Unique design</span><span class="dot"></span><span>For
+                            men</span><span class="dot"></span><span>Casual<br></span></div>
+                    <p class="text-justify text-truncate para mb-0">{{i.description}}<br><br></p>
+                </div>
+                <div class="align-items-center align-content-center col-md-3 border-left mt-1">
+                    <div class="d-flex flex-row align-items-center">
+                        <h4 class="mr-1">{{i.price}}<sup>đ</sup></h4>
+                    </div>
+                    <h6 class="text-success">Free shipping</h6>
+                    <div class="d-flex flex-column mt-4">
+                        <button routerLinkActive="active" routerLink="{{i.id}}" class="btn btn-primary btn-sm"
+                            type="button">Details</button>
+                        <button class="btn btn-outline-primary btn-sm mt-2" type="button" (click)="buyNow(i)">Add to
+                            cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="d-block ml-auto mr-auto">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

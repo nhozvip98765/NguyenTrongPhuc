@@ -1,0 +1,101 @@
+<form [formGroup]="productForm" (ngSubmit)="!productForm.invalid && createProducts(productForm.value)">
+
+    <div class="form-group mx-sm-3 mb-2">
+        <label for="name">
+            Product Name
+        </label>
+        <input novalidate id="name" class="form-control" formControlName="name" placeholder="" [(ngModel)]="product.name"
+            >
+
+        <div class="alert alert-danger alert-dismissible fade show"
+            *ngIf="productForm.get('name')?.hasError('required') && productForm.get('name')?.touched">
+            Name required
+        </div>
+    </div>
+
+    <div class="form-group  mx-sm-3 mb-2">
+        <label for="image">
+            Product Image
+        </label>
+        <input id="image" type="text" class="form-control" formControlName="image" placeholder="" [(ngModel)]="product.image"
+           >
+
+        <div class="alert alert-danger alert-dismissible fade show"
+            *ngIf="productForm.get('image')?.hasError('required') && productForm.get('image')?.touched">
+            Image required
+        </div>
+    </div>
+
+    <div class="form-group  mx-sm-3 mb-2">
+        <label for="description">
+            Product Description
+        </label>
+        <input id="description" type="text" class="form-control" formControlName="description" placeholder="" [(ngModel)]="product.description"
+            >
+
+        <div class="alert alert-danger alert-dismissible fade show"
+            *ngIf="productForm.get('description')?.hasError('required') && productForm.get('description')?.touched">
+            Description required
+        </div>
+    </div>
+
+    <div class="form-group  mx-sm-3 mb-2">
+        <label for="price">
+            Product Price
+        </label>
+        <input id="price" type="text" class="form-control" formControlName="price" placeholder="" [(ngModel)]="product.price"
+            >
+
+        <div class="alert alert-danger alert-dismissible fade show"
+            *ngIf="productForm.get('price')?.hasError('required') && productForm.get('price')?.touched">
+            Price required
+        </div>
+    </div>
+
+    <div class="form-group  mx-sm-3 mb-2">
+        <label for="price">
+            Product Quantity
+        </label>
+        <input id="quantity" type="text" class="form-control" formControlName="quantity" placeholder="" [(ngModel)]="product.quantity"
+            >
+
+        <div class="alert alert-danger alert-dismissible fade show"
+            *ngIf="productForm.get('quantity')?.hasError('required') && productForm.get('quantity')?.touched">
+            Quantity required
+        </div>
+    </div>
+    <button [hidden]="add" class="btn btn-primary mx-sm-3 mb-2" type="submit">Create</button>
+    <button [hidden]="edit" (click)="updateProduct()" class="btn btn-primary mx-sm-3 mb-2" type="submit">Update</button>
+
+</form>
+<div class="container-fluid">
+    <div class="col">
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Image</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let i of products">
+                    <td>{{i.id}}</td>
+                    <td>{{i.name}}</td>
+                    <td><img src="{{i.image}}" style="width: 100px; height: 100px;" alt=""></td>
+                    <td>{{i.description}}</td>
+                    <td>{{i.price}}</td>
+                    <td class="text-center">{{i.quantity}}</td>
+                    <td><button class="btn btn-success" (click)="setProductEdit(i)">Update</button></td>
+                    <td><button class="btn btn-danger" (click)="deleteProduct(i.id)">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>

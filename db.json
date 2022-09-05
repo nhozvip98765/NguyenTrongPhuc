@@ -1,0 +1,102 @@
+{
+  "products": [
+    {
+      "name": "LUCKY T-SHIRT/BROWN",
+      "description": "LUCKY T-SHIRT HOẠ TIẾT: IN LỤA U.S.A INK COLOR: BROWN MATERIAL: PREMIUM COTTON.",
+      "image": "../assets/images/2.jpg",
+      "price": "990000",
+      "quantity": "100",
+      "id": 1
+    },
+    {
+      "name": "NOT BELOW T-SHIRT/MATCHA",
+      "image": "../assets/images/2.jpg",
+      "price": 89000,
+      "quantity": 1,
+      "description": "NOT BELOW T-SHIRT HOẠ TIẾT: THÊU MẬT ĐỘ CAO COLOR: MATCHA MATERIAL: PREMIUM COTTON. ",
+      "id": 2
+    },
+    {
+      "name": "STREET T-SHIRT/RED",
+      "image": "../assets/images/3.jpg",
+      "price": 89000,
+      "quantity": 1,
+      "description": "STREET T-SHIRT HOẠ TIẾT: THÊU MẬT ĐỘ CAO COLOR: RED MATERIAL: PREMIUM COTTON. ",
+      "id": 3
+    },
+    {
+      "name": "MULTICOLOL BASIC SHIRT/GREY",
+      "image": "../assets/images/4.jpg",
+      "price": 99000,
+      "quantity": 1,
+      "description": "MULTICOLOL BASIC SHIRT HOẠ TIẾT: LOGO RUBBER SIGNATURE COLOR: GREY MATERIAL: MANGO SILK. ",
+      "id": 4
+    },
+    {
+      "name": "MULTICOLOL BASIC SHIRT/DARK GREEN",
+      "image": "../assets/images/5.jpg",
+      "price": 99000,
+      "quantity": 1,
+      "description": "MULTICOLOL BASIC SHIRT HOẠ TIẾT: LOGO RUBBER SIGNATURE COLOR: DARK GREEN MATERIAL: MANGO SILK. ",
+      "id": 5
+    },
+    {
+      "name": "ESSENTIAL SHORT/BEGEI",
+      "image": "../assets/images/6.jpg",
+      "price": 99000,
+      "quantity": 1,
+      "description": "ESSENTIAL SHORT HOẠ TIẾT: LOGO RUBBER SIGNATURE COLOR: BEGEI MATERIAL: FRENCH TERRY COTTON.  ",
+      "id": 6
+    },
+    {
+      "name": "ESSENTIAL SHORT/BLACK",
+      "image": "../assets/images/7.jpg",
+      "price": 99000,
+      "quantity": 1,
+      "description": "ESSENTIAL SHORT HOẠ TIẾT: LOGO RUBBER SIGNATURE COLOR: BLACK MATERIAL: FRENCH TERRY COTTON.  ",
+      "id": 7
+    }
+  ],
+  "auth": [
+    {
+      "fullname": "ADMIN",
+      "username": "admin",
+      "email": "admin@gmail.com",
+      "password": "123456",
+      "phone": "123456789",
+      "id": 1
+    },
+    {
+      "fullname": "Nguyễn Trọng Phúc",
+      "username": "phuc1234",
+      "email": "phuc@gmail.com",
+      "password": "123456",
+      "phone": "123456789",
+      "id": 2
+    },
+    {
+      "fullname": "Nguyễn Phúc",
+      "username": "phuc12345",
+      "email": "phuc@gmail.com",
+      "password": "123456",
+      "phone": "123456789",
+      "id": 3
+    },
+    {
+      "fullname": "Trọng Phúc",
+      "username": "phuc123456",
+      "email": "phuc@gmail.com",
+      "password": "123456",
+      "phone": "123456789",
+      "id": 4
+    },
+    {
+      "fullname": "Nguyễn Trọng Phúc",
+      "username": "phuc123467",
+      "email": "nhozvip98765@gmail.com",
+      "password": "123456",
+      "phone": "0123456789",
+      "id": 5
+    }
+  ]
+}
